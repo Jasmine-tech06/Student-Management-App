@@ -130,10 +130,28 @@
   animation-delay: 1.6s;
 }
 
+.card-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, .35);
+  transition: transform .3s ease;
+}
+
+.glass-card:hover .card-icon-wrap {
+  transform: scale(1.1) rotate(-6deg);
+}
+
 .card-icon {
-  font-size: 3rem;
-  color: #2563eb;
-  margin-bottom: 18px;
+  font-size: 1.7rem;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  fill: #ffffff;
 }
 
 .glass-card h2 {

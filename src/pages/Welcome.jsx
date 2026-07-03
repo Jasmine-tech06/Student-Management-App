@@ -86,19 +86,25 @@ function Welcome() {
         >
 
           <div className="glass-card card1">
-            <FaUserGraduate className="card-icon" />
+            <div className="card-icon-wrap">
+              <FaUserGraduate className="card-icon" />
+            </div>
             <h2>1200+</h2>
             <p>Students</p>
           </div>
 
           <div className="glass-card card2">
-            <FaChalkboardTeacher className="card-icon" />
+            <div className="card-icon-wrap">
+              <FaChalkboardTeacher className="card-icon" />
+            </div>
             <h2>85+</h2>
             <p>Faculty</p>
           </div>
 
           <div className="glass-card card3">
-            <FaUniversity className="card-icon" />
+            <div className="card-icon-wrap">
+              <FaUniversity className="card-icon" />
+            </div>
             <h2>12</h2>
             <p>Departments</p>
           </div>
