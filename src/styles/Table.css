@@ -1,0 +1,469 @@
+.records-page {
+  min-height: 100vh;
+  padding: 130px 0 80px;
+  background: linear-gradient(135deg, #eef4ff 0%, #ffffff 55%, #f8fbff 100%);
+}
+
+.records-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.records-header h1 {
+  font-size: 2.8rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.records-header p {
+  color: #64748b;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* ================= Dashboard Cards ================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.dashboard-card {
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: .35s;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.total .card-icon {
+  background: linear-gradient(135deg,#2563eb,#3b82f6);
+}
+
+.present .card-icon {
+  background: linear-gradient(135deg,#16a34a,#22c55e);
+}
+
+.absent .card-icon {
+  background: linear-gradient(135deg,#dc2626,#ef4444);
+}
+
+.attendance .card-icon {
+  background: linear-gradient(135deg,#7c3aed,#9333ea);
+}
+
+.dashboard-card h2 {
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.dashboard-card p {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+/* ================= Table ================= */
+
+.table-section {
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(18px);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.table-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.table-top h2 {
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.table-top p {
+  color: #64748b;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 0 18px;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: .35s;
+}
+
+.search-box:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 10px 25px rgba(37,99,235,.15);
+}
+
+.search-box svg {
+  color: #2563eb;
+}
+
+.search-box input {
+  width: 260px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px 0;
+  font-size: .95rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+thead {
+  background: linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+thead th {
+  color: white;
+  padding: 18px;
+  text-align: left;
+  font-size: .95rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: .3s;
+}
+
+tbody tr:hover {
+  background: #f8fbff;
+}
+
+tbody td {
+  padding: 18px;
+  color: #334155;
+}
+
+/* ================= Status ================= */
+
+.status {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: .85rem;
+}
+
+.present {
+  background: rgba(34,197,94,.15);
+  color: #16a34a;
+}
+
+.absent {
+  background: rgba(239,68,68,.15);
+  color: #dc2626;
+}
+
+/* ================= Buttons ================= */
+
+.edit-btn,
+.delete-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: .35s;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.edit-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 20px rgba(37,99,235,.3);
+}
+
+.delete-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 20px rgba(239,68,68,.3);
+}
+
+/* ================= Empty State ================= */
+
+.no-data {
+  text-align: center;
+  padding: 60px;
+}
+
+.no-data svg {
+  font-size: 4rem;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.no-data h3 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.no-data p {
+  color: #64748b;
+}
+
+/* ================= Dark Mode ================= */
+
+body.dark .records-page {
+  background: #0f172a;
+}
+
+body.dark .records-header h1,
+body.dark .dashboard-card h2,
+body.dark .table-top h2,
+body.dark tbody td,
+body.dark .no-data h3 {
+  color: white;
+}
+
+body.dark .records-header p,
+body.dark .dashboard-card p,
+body.dark .table-top p,
+body.dark .no-data p {
+  color: #cbd5e1;
+}
+
+body.dark .dashboard-card,
+body.dark .table-section {
+  background: rgba(30,41,59,.85);
+}
+
+body.dark .search-box {
+  background: #0f172a;
+}
+
+body.dark .search-box input {
+  color: white;
+}
+
+body.dark tbody tr {
+  border-color: #334155;
+}
+
+body.dark tbody tr:hover {
+  background: #1e293b;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 1100px) {
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .records-header h1 {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .records-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .table-section {
+    padding: 20px;
+  }
+
+}
+/* ================= Charts ================= */
+
+.chart-card{
+
+margin-bottom:40px;
+
+padding:30px;
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.chart-card h2{
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#0f172a;
+
+}
+
+body.dark .chart-card{
+
+background:#1e293b;
+
+}
+
+body.dark .chart-card h2{
+
+color:white;
+
+}
+/* ================= Export Button ================= */
+
+.excel-btn{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+margin-bottom:25px;
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:15px;
+
+background:linear-gradient(
+135deg,
+#16a34a,
+#22c55e
+);
+
+color:white;
+
+font-size:1rem;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.excel-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(34,197,94,.35);
+
+}
+
+.excel-btn svg{
+
+font-size:1.3rem;
+
+}
+/* ================= PDF Button ================= */
+
+.pdf-btn{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:15px;
+
+background:linear-gradient(
+135deg,
+#ef4444,
+#dc2626
+);
+
+color:white;
+
+font-size:1rem;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.pdf-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(239,68,68,.35);
+
+}
+
+.pdf-btn svg{
+
+font-size:1.3rem;
+
+}

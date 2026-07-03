@@ -1,0 +1,211 @@
+.delete-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,.65);
+    backdrop-filter:blur(8px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.delete-modal{
+    width:100%;
+    max-width:430px;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(20px);
+    border-radius:28px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:0 30px 60px rgba(0,0,0,.2);
+}
+
+.delete-icon{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    color:white;
+
+    font-size:2rem;
+
+    animation:pulse 1.8s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+box-shadow:0 0 0 rgba(239,68,68,.4);
+}
+
+50%{
+transform:scale(1.08);
+box-shadow:0 0 30px rgba(239,68,68,.45);
+}
+
+100%{
+transform:scale(1);
+box-shadow:0 0 0 rgba(239,68,68,.4);
+}
+
+}
+
+.delete-modal h2{
+
+font-size:2rem;
+color:#0f172a;
+margin-bottom:15px;
+
+}
+
+.delete-modal p{
+
+color:#64748b;
+margin-bottom:35px;
+line-height:1.7;
+
+}
+
+.delete-buttons{
+
+display:flex;
+gap:18px;
+
+}
+
+.cancel-delete,
+.confirm-delete{
+
+flex:1;
+
+padding:15px;
+
+border:none;
+border-radius:16px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+
+font-size:.95rem;
+font-weight:600;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.cancel-delete{
+
+background:#e2e8f0;
+color:#334155;
+
+}
+
+.confirm-delete{
+
+background:linear-gradient(
+135deg,
+#ef4444,
+#dc2626
+);
+
+color:white;
+
+}
+
+.cancel-delete:hover{
+
+background:#cbd5e1;
+
+transform:translateY(-3px);
+
+}
+
+.confirm-delete:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 30px rgba(239,68,68,.35);
+
+}
+
+/* ---------- Dark ---------- */
+
+body.dark .delete-modal{
+
+background:#1e293b;
+
+}
+
+body.dark .delete-modal h2{
+
+color:white;
+
+}
+
+body.dark .delete-modal p{
+
+color:#cbd5e1;
+
+}
+
+body.dark .cancel-delete{
+
+background:#334155;
+color:white;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:500px){
+
+.delete-modal{
+
+padding:30px 22px;
+
+}
+
+.delete-buttons{
+
+flex-direction:column;
+
+}
+
+.delete-modal h2{
+
+font-size:1.6rem;
+
+}
+
+.delete-icon{
+
+width:75px;
+height:75px;
+
+font-size:1.6rem;
+
+}
+
+}

@@ -1,0 +1,198 @@
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,.55);
+    backdrop-filter:blur(8px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.edit-modal{
+    width:100%;
+    max-width:550px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(22px);
+    border-radius:28px;
+    padding:35px;
+    box-shadow:0 30px 60px rgba(0,0,0,.18);
+    animation:fadeUp .35s ease;
+}
+
+.edit-modal h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0f172a;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.modal-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.modal-form input,
+.modal-form select{
+
+    width:100%;
+    padding:16px 18px;
+
+    border:2px solid #e2e8f0;
+    border-radius:16px;
+
+    outline:none;
+
+    font-size:.95rem;
+
+    transition:.35s;
+
+    background:white;
+
+}
+
+.modal-form input:focus,
+.modal-form select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 5px rgba(37,99,235,.12);
+
+}
+
+.modal-buttons{
+
+    margin-top:30px;
+
+    display:flex;
+    justify-content:flex-end;
+    gap:18px;
+
+}
+
+.cancel-btn,
+.save-btn{
+
+    padding:14px 30px;
+
+    border:none;
+    border-radius:14px;
+
+    color:white;
+
+    font-size:.95rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.cancel-btn{
+
+    background:#64748b;
+
+}
+
+.save-btn{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+}
+
+.cancel-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#475569;
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.28);
+
+}
+
+/* ---------- Dark Mode ---------- */
+
+body.dark .edit-modal{
+
+    background:#1e293b;
+
+}
+
+body.dark .edit-modal h2{
+
+    color:white;
+
+}
+
+body.dark .modal-form input,
+body.dark .modal-form select{
+
+    background:#0f172a;
+    color:white;
+    border-color:#334155;
+
+}
+
+body.dark .modal-form input:focus,
+body.dark .modal-form select:focus{
+
+    border-color:#3b82f6;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+.edit-modal{
+
+padding:28px 22px;
+
+}
+
+.edit-modal h2{
+
+font-size:1.7rem;
+
+}
+
+.modal-buttons{
+
+flex-direction:column;
+
+}
+
+.cancel-btn,
+.save-btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.edit-modal{
+
+padding:22px 18px;
+
+border-radius:20px;
+
+}
+
+}

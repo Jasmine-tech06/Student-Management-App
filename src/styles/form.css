@@ -1,0 +1,277 @@
+.student-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 28px;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 25px 50px rgba(37,99,235,.15);
+}
+
+.form-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.form-title h2{
+    font-size:2rem;
+    color:#0f172a;
+    margin-bottom:8px;
+}
+
+.form-title p{
+    color:#64748b;
+}
+
+.student-form form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+/* ================= Inputs ================= */
+
+.input-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f8fafc;
+    border:2px solid transparent;
+    border-radius:18px;
+    padding:0 18px;
+    transition:.35s;
+}
+
+.input-box:hover,
+.input-box:focus-within{
+    border-color:#2563eb;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,99,235,.15);
+}
+
+.input-box svg{
+    color:#2563eb;
+    min-width:20px;
+}
+
+.input-box input,
+.input-box select{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:17px 0;
+    font-size:.95rem;
+    font-family:inherit;
+}
+
+/* ================= Status ================= */
+
+.status-section{
+    position:relative;
+}
+
+.status-section label{
+    display:block;
+    margin-bottom:12px;
+    font-weight:600;
+    color:#334155;
+}
+
+.status-display{
+    padding:15px 18px;
+    border-radius:16px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.35s;
+    text-align:center;
+    user-select:none;
+}
+
+.absent-display{
+    background:#fee2e2;
+    color:#dc2626;
+    border:2px solid #fecaca;
+}
+
+.present-display{
+    background:#dcfce7;
+    color:#15803d;
+    border:2px solid #bbf7d0;
+}
+
+.status-display:hover{
+    transform:translateY(-3px);
+}
+
+/* ================= Status Buttons ================= */
+
+.status-options{
+    margin-top:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.present-btn,
+.absent-btn{
+
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    color:white;
+    font-weight:600;
+    transition:.35s;
+
+}
+
+.present-btn{
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+}
+
+.absent-btn{
+
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+}
+
+.present-btn:hover,
+.absent-btn:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+}
+
+/* ================= Submit ================= */
+
+.submit-btn{
+
+    margin-top:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+
+    padding:16px;
+
+    border:none;
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.submit-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 35px rgba(37,99,235,.25);
+
+}
+
+.submit-btn svg{
+
+    transition:.35s;
+
+}
+
+.submit-btn:hover svg{
+
+    transform:translateX(5px);
+
+}
+
+/* ================= Dark ================= */
+
+body.dark .student-form{
+
+    background:rgba(30,41,59,.85);
+
+}
+
+body.dark .form-title h2{
+
+    color:white;
+
+}
+
+body.dark .form-title p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .input-box{
+
+    background:#0f172a;
+
+}
+
+body.dark .input-box input,
+body.dark .input-box select{
+
+    color:white;
+
+}
+
+body.dark .status-section label{
+
+    color:white;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+.student-form{
+
+padding:30px 22px;
+
+}
+
+.form-title h2{
+
+font-size:1.7rem;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.student-form{
+
+padding:24px 18px;
+
+}
+
+.status-options{
+
+grid-template-columns:1fr;
+
+}
+
+}
